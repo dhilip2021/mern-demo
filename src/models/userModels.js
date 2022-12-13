@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema({
         required: true,
         trim: true,
         min: 3,
-        max: 128
+        max: 120        
 
     },
     userName: {
@@ -53,4 +53,4 @@ const userSchema = new mongoose.Schema({
     }
 },{timestamps :true})
 
-module.exports = mongoose.model("UserModels")
+module.exports = mongoose.model("UserModels",userSchema)
