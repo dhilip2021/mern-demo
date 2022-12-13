@@ -25,7 +25,32 @@ const userSchema = new mongoose.Schema({
         index: true,
         lowercase: true
 
+    },
+    email: {
+        type: String,
+        required: true,
+        trim: true,
+        unique: true,
+        index: true,
+        lowercase: true
+
+    },
+    hash_password:{
+        type: String,
+        required: true
+    },
+    role:{
+        type:String,
+        enum:["user","admin"],
+        default:"admin"
+
+    },
+    contactNumber:{
+        type: String
+    },
+    profilePicture:{
+        type:String
     }
-})
+},{timestamps :true})
 
 module.exports = mongoose.model("UserModels")
