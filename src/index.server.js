@@ -22,7 +22,7 @@ mongoose.connect(connectionURL,
 
 app.get("/",(req,res)=>{
     res.status(200).json({
-        message:"welcome our server"
+        message:"welcome our local server"
     })
 })
 
